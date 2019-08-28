@@ -1,0 +1,69 @@
+<div class="header clearfix">
+    <div class="container">
+        <div class="row" style="height: 120px;display: flex;align-items: center;">
+            <div class="corp-info">
+                <a class="logo" href="http://demo.pageadmin.net/">
+                    <img src="https://16582339.s21i.faiusr.com/4/1/ABUIABAEGAAg8fmP3gUo0Iu89AMwgAg4gAg.png" width="108px"; height="108px"/>
+                </a>
+            </div>
+            <div class="nav text-right " id="navMenus">
+                <ul>
+                    <li class="item-click"
+                        onclick="window.location.href = '/'"
+                    >
+                        <a href="javascript:;" onclick="return false;">首页</a>
+                    </li>
+                    <li class="item-click"
+                        onclick="window.location.href = '/page/product.html?id=112'"
+                    >
+                        <a href="javascript:;" onclick="return false;">产品图集</a>
+                    </li>
+                    <li class="item-click"
+                        onclick="window.location.href = '/page/custom.html?id=113'"
+                    >
+                        <a href="javascript:;" onclick="return false;">机柜定制</a>
+                    </li>
+                    <li class="item-click"
+                        onclick="window.location.href = '/page/about.html?id=114'"
+                    >
+                        <a href="javascript:;" onclick="return false;">关于我们</a>
+                    </li>
+                    <li class="item-click"
+                        onclick="window.location.href = '/page/cooperation.html?id=115'"
+                    >
+                        <a href="javascript:;" onclick="return false;">申请合作</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- <div class="mask-bg" id="maskBg"></div>
+            <span class="nav-toggle hidden-lg" id="navToggle"><i class="fa fa-bars"></i></span> -->
+        </div>
+    </div>
+</div>
+<script>
+    // 获取URL参数
+    function GetQueryString(name){
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);//search,查询？后面的参数，并匹配正则
+        if(r!=null)return  unescape(r[2]); return null;
+    }
+    $(document).ready(function () {
+        var urlId = GetQueryString("id");
+        var links = $(".item-click");
+        var home = links[0]
+        ,product = links[1]
+        ,custom = links[2]
+        ,about = links[3]
+        ,cooperation = links[4];
+        $(home).addClass('itemSelected');
+        if(urlId === "112"){
+            $(product).addClass('itemSelected').siblings().removeClass('itemSelected');
+        }else if(urlId === "113"){
+            $(custom).addClass('itemSelected').siblings().removeClass('itemSelected');
+        }else if(urlId === "114"){
+            $(about).addClass('itemSelected').siblings().removeClass('itemSelected');
+        }else if(urlId === "115"){
+            $(cooperation).addClass('itemSelected').siblings().removeClass('itemSelected');
+        }
+    });
+</script>
