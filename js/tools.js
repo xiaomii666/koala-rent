@@ -4,7 +4,6 @@ var tools = {
    * */
   toTOP:function () {
     $(window).scroll(function() {
-        console.log($(window).scrollTop())
         if($(window).scrollTop() >= 100){
             $('.actGotop').css('display', 'inline');
         }else{

@@ -3,11 +3,11 @@
 /*网站公共样式*/
 .info-content{font-size:15px;line-height:2.5}
 a{color:#333;text-decoration:none;}                                            
-a:hover{color:brown}
-a:focus{color:brown}
+a:hover{color:#4ab344;}
+a:focus{color:#4ab344;}
 a.btn-more{display:inline-block;width:140px;height:34px;line-height:34px;border:1px #CCC solid;color:#999;transition:all 0.5s ease;font-size:14px;transition:all 0.5s ease;text-align:center;margin:0px auto;margin-top:30px}
 a.btn-more:hover{background:#40312f;border-color:#40312f;color:white;}
-.banner{height:500px\9!important;overflow:hidden\9!important;overflow:hidden;} /*兼容ie低版*/
+.banner{height:600px\9!important;overflow:hidden\9!important;overflow:hidden;} /*兼容ie低版*/
 
 /*遮罩层*/
 .mask-bg{position:fixed;width: 100%;height:100%;display:none;height:100vh;background-color: rgba(0, 0, 0, .7);overflow:hidden;z-index:99;top: 0;left: 0;}
@@ -21,6 +21,15 @@ a.btn-more:hover{background:#40312f;border-color:#40312f;color:white;}
 .module-box .module-title .en-title i{float:left;width:55px;background:#CCC;height:1px;margin-top:15px; }
 .module-box .module-title .en-title span{float:left;margin:0px 5px;}
 
+/*顶部样式*/
+.g_web{
+    position: relative;
+    height: 100%;
+}
+.header{position:relative;}
+.header .corp-info a:hover{color: #333;}
+.header .corp-info h3{display: inline-block;}
+
 /*底部*/
 footer{position: relative;text-align:left;width:100%;min-height:95px;background:#2b2b2b;margin-top:40px;line-height:2.5}
 .footer_box{display: flex;align-items: center;justify-content: center;color: #ffffff;}
@@ -33,9 +42,138 @@ footer{position: relative;text-align:left;width:100%;min-height:95px;background:
 .copyright{color: #888;}
 .copyright span:hover{cursor: pointer;text-decoration: underline;}
 
-/*顶部样式*/
-.header{position:relative;}
-.header .row .nav{padding-left: 210px;}
+/* main部分样式 */
+.banner{
+    width: 100%;
+    min-width: 1920px;
+    height: 600px;
+    position: relative;
+    margin: 0px auto;
+    padding-left: 0;
+    padding-right: 0;
+    overflow: inherit;
+}
+.banner.group-bannerV1 .swiper-slide {
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+}
+.banner.group-bannerV1 .container{
+    height: 120px;
+    overflow: hidden;
+    position: relative;
+    top: -85px;
+    z-index: 999;
+    opacity: 0.95;
+}
+.banner.group-bannerV1 .floatImgWrapp {
+    width: 100%;
+    height: 100%;
+    animation: 0s ease 0.3s 1 normal none running none;
+}
+.banner.group-bannerV1 .floatImgWrapp map area {
+    outline: 0;
+}
+.banner.group-bannerV1 .swiper-button-next, .swiper-button-prev {
+    width: 68px;
+    height: 71px;
+    border-radius: 3px;
+}
+.banner.group-bannerV1 .swiper-button-next:hover, .swiper-button-prev:hover {
+    background-color: rgba(0, 0, 0, .2);
+}
+.banner.group-bannerV1 .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+    left: 45px;
+}
+.banner.group-bannerV1 .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+    right: 45px;
+}
+.floatLeftBottom{
+    width: 198px;
+    height: 350px;
+    position: fixed;
+    top: 195px;
+    bottom: 0;
+    left: -198px;
+    font-size: 0;
+    z-index: 9999;
+    background: #fff;
+    border: 1px #f2f2f2 solid;
+    transition: all 0.6s ease-in-out;
+}
+.floatLeftBottom .g_SideContent{
+    position: relative;
+    height: 100%;
+}
+.floatLeftBottom .g_SideContent .content-side{
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+.floatLeftBottom .g_SideContent .content-side:first-child{
+    margin: 0 10px;
+    border-bottom: 1px solid #dedede;
+}
+.floatLeftBottom .g_SideContent .content-side .list-code{
+    position: relative;
+}
+.floatLeftBottom .g_SideContent .content-side .list-code .contact-btn{
+    display: flex;
+    align-items: center;
+    line-height: 30px;
+}
+.floatLeftBottom .g_SideContent .content-side .list-code .qqImg {
+    width: 21px;
+    height: 21px;
+    display: inline-block;
+    margin-right: 8px;
+    background: url(/images/vbg_icons.png) no-repeat;
+    background-position: -524px -1780px;
+}
+.floatLeftBottom .g_SideContent .content-side .list-code .wechatImg {
+    width: 21px;
+    height: 21px;
+    display: inline-block;
+    margin-right: 8px;
+    background: url(/images/vbg_icons.png) no-repeat;
+    background-position: -527px -2346px;
+}
+.floatLeftBottom .g_SideContent .content-side .list-code .phoneImg {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin-right: 8px;
+    margin-left: 16px;
+    background: url(/images/phone.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.floatLeftBottom .g_SideContent .content-side .list-code .simpleText{
+    word-wrap: break-word;
+    word-break: break-all;
+    line-height: 35px;
+    font-size: 18px;
+}
+.floatLeftBottom .g_sideBtn{
+    width: 34px;
+    background: #4ab344;
+    position: absolute;
+    right: -35px;
+    top: calc(350px / 2 - 57px);
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.floatLeftBottom .g_sideBtn_c{
+    height: auto;
+    font-size: 14px;
+    color: #ffffff;
+    padding: 15px 4px;
+    word-wrap: break-word;
+    text-align: center;
+}
+
 /*自定义导航动画，也可以用animater.css中的动画，需要在script.js中修改*/
 .nav .animated,.sub-nav .animated{-webkit-animation-duration:0.4s;animation-duration:0.4s;-webkit-animation-fill-mode:both;animation-fill-mode:both;}
 .navSlide{-webkit-animation-name:navSlide;animation-name:navSlide}
@@ -194,4 +332,44 @@ footer{position: relative;text-align:left;width:100%;min-height:95px;background:
 .actGotop:hover {
     background-position:left -50px;
     background-size: cover;
+}
+.g_sideCode{
+    background: #fff;
+    position: fixed;
+    top: 266.5px;
+    left: 148px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    box-shadow: 0 0 10px rgba(0,0,0,.15);
+    border-radius: 2PX;
+    z-index: 9999;
+}
+.g_sideCode .content-code{
+    width: 200px;
+    height: 212px;
+    padding: 35px 40px;
+    text-align: center;
+}
+.g_sideCode .content-code .close_btn{
+    width: 14px;
+    height: 14px;
+    background: url('/images/vbg_icons(2).png') -451px -189px no-repeat;
+    cursor: pointer;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+}
+.g_sideCode .content-code .qrcode_img{
+    display: block;
+    width: 120px;
+    height: 120px;
+}
+.g_sideCode .content-code .tip_text{
+    margin-top: 15px;
+}
+.g-hide{
+    display: none;
+}
+.g-show{
+    display: block;
 }

@@ -150,7 +150,7 @@ a.text-danger:hover,a.text-danger:focus {color: #843534;}
 
 /*栅格样式*/
 .container {margin-right: auto;margin-left: auto;padding-left: 150px;padding-right: 150px;}
-.container .container{padding-left:0px;padding-right:0px}
+/* .container .container{padding-left:0px;padding-right:0px} */
 @media (min-width:768px) {.container {width: 100%;}} /* 注意媒体查询顺序要从小到大 */
 .container-fluid {margin-right: auto;margin-left: auto;padding-left: 15px;padding-right: 15px;}
 .row {margin-left: -15px;margin-right: -15px;}
@@ -251,7 +251,7 @@ a.text-danger:hover,a.text-danger:focus {color: #843534;}
    .text-xs-justify{text-align:justify !important;}
    }
 
-@media (min-width: 768px) {
+@media (min-width: 150px) {
     .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-avg-5, .col-sm-avg-4, .col-sm-avg-3, .col-sm-avg-2, .col-sm-avg-1 
     {
         float: left;
@@ -338,7 +338,7 @@ a.text-danger:hover,a.text-danger:focus {color: #843534;}
    .text-sm-justify{text-align:justify !important;}
 
 }
-@media (min-width: 768px) {
+@media (min-width: 150px) {
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md-avg-5, .col-md-avg-4, .col-md-avg-3, .col-md-avg-2, .col-md-avg-1 
   {
       float: left;
@@ -988,6 +988,7 @@ pre code {padding: 0;font-size: inherit;color: inherit;white-space: pre-wrap;bac
 .padding-left-80 {padding-left: 80px}
 .padding-left-90 {padding-left: 90px}
 .padding-left-100{padding-left:100px}
+.padding-left-180{padding-left:180px}
 
 /*-----margin-----*/
 .margin-0 { margin: 0px;}
